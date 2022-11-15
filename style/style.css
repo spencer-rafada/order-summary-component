@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+.summary {
+  z-index: 3;
+  width: 375px;
+  font-size: 16px;
+  text-align: center;
+  font-family: "Red Hat Display", sans-serif;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+.summary .summary__img img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 100%;
+}
+.summary .summary__info {
+  padding: 35px;
+  color: hsl(224deg, 23%, 55%);
+}
+.summary .summary__info h1 {
+  color: hsl(223deg, 47%, 23%);
+  margin-top: 0;
+  font-weight: 900;
+  font-size: 25px;
+}
+.summary .summary__info p {
+  line-height: 30px;
+}
+.summary .summary__info .summary__price {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: hsl(225deg, 100%, 98%);
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.summary .summary__info .summary__price img {
+  margin-right: 20px;
+}
+.summary .summary__info .summary__price .summary__price__info {
+  display: flex;
+  flex-direction: column;
+}
+.summary .summary__info .summary__price .summary__price__info h3 {
+  color: hsl(223deg, 47%, 23%);
+  margin: 0 auto;
+}
+.summary .summary__info .summary__price .summary__price__info p {
+  margin: 0;
+}
+
+.background__img {
+  position: absolute;
+  z-index: 0;
+}/*# sourceMappingURL=style.css.map */

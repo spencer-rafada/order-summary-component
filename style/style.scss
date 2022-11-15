@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+$pale-blue: hsl(225, 100%, 94%);
+$bright-blue: hsl(245, 75%, 52%);
+$very-pale-blue: hsl(225, 100%, 98%);
+$desaturated-blue: hsl(224, 23%, 55%);
+$dark-blue: hsl(223, 47%, 23%);
+
+.summary {
+  z-index: 3;
+  width: 375px;
+  font-size: 16px;
+  text-align: center;
+  font-family: 'Red Hat Display', sans-serif;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  .summary__img {
+    img {
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      width: 100%;
+    }
+  }
+  .summary__info {
+    padding: 35px;
+    color: $desaturated-blue;
+    h1 {
+      color: $dark-blue;
+      margin-top: 0;
+      font-weight: 900;
+      font-size: 25px;
+    }
+    p {
+      line-height: 30px;
+    }
+    .summary__price {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      background-color: $very-pale-blue;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      img {
+        margin-right: 20px;
+      }
+      .summary__price__info {
+        display: flex;
+        flex-direction: column;
+        h3 {
+          color: $dark-blue;
+          margin: 0 auto;
+        }
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+// TODO: Figure this out.
+.background__img {
+  position: absolute;
+  // top: 0%;
+  // left: 0%;
+  z-index: 0;
+}
