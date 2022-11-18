@@ -7,13 +7,18 @@ $desaturated-blue: hsl(224, 23%, 55%);
 $dark-blue: hsl(223, 47%, 23%);
 
 .summary {
+  position: absolute;
   z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 375px;
   font-size: 16px;
   text-align: center;
   font-family: 'Red Hat Display', sans-serif;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
+  background-color: white;
   .summary__img {
     img {
       border-top-left-radius: 20px;
@@ -33,19 +38,24 @@ $dark-blue: hsl(223, 47%, 23%);
     p {
       line-height: 30px;
     }
-    .summary__price {
+    .summary__price__container {
       display: flex;
+      justify-content: space-between;
       align-items: center;
       padding: 10px;
       background-color: $very-pale-blue;
       margin-top: 30px;
       margin-bottom: 30px;
-      img {
-        margin-right: 20px;
-      }
+      border-radius: 8px;
       .summary__price__info {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        .summary__price {
+          text-align: left;
+        }
+        img {
+          margin-right: 20px;
+        }
         h3 {
           color: $dark-blue;
           margin: 0 auto;
@@ -54,14 +64,64 @@ $dark-blue: hsl(223, 47%, 23%);
           margin: 0;
         }
       }
+      // put buttons here
     }
   }
+}
+
+.button {
+  font-weight: 700;
+  font-size: 16px;
+  border: 0px;
+  background-color: transparent;
+}
+
+.button-change {
+  font-size: 14px;
+  color: $bright-blue;
+  text-decoration: underline;
+}
+
+.button-change:hover {
+  color: hsl(245, 77%, 61%);
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.summary__price__buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.button-proceed {
+  background-color: $bright-blue;
+  color: white;
+  padding: 14px 16px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.button-proceed:hover {
+  background-color: hsl(245, 77%, 61%);
+}
+
+.button-cancel {
+  color: $desaturated-blue;
+  font-size: 12px;
+}
+
+.button-cancel:hover {
+  color: $dark-blue;
 }
 
 // TODO: Figure this out.
 .background__img {
   position: absolute;
-  // top: 0%;
-  // left: 0%;
+  top: 0%;
+  left: 0%;
+  width: 100%;
   z-index: 0;
 }
